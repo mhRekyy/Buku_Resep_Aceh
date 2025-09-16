@@ -1,15 +1,37 @@
+<!-- Simpan sebagai mie_aceh_enhanced.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Resep Masakan Aceh</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mie Aceh — Resep Tradisional Aceh</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    body{margin:0;padding:1.2rem;background:#fff8f0;color:#222;}
+    header{background:#d9486f;color:#fff;padding:1rem;border-radius:8px}
+    main{max-width:900px;margin:1rem auto;padding:1rem;background:#fff;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+    h1{margin:0;font-size:1.4rem}
+    h2{color:#b91c5b;margin-top:.6rem}
+    section{margin:0.9rem 0}
+    ul{line-height:1.6}
+    .meta{font-size:.9rem;color:#555}
+    .cta{display:inline-block;margin-top:1rem;padding:.5rem .8rem;background:#f97316;color:#fff;border-radius:6px;text-decoration:none}
+    footer{max-width:900px;margin:1rem auto;text-align:center;color:#666;font-size:.9rem}
+    @media (max-width:560px){main{padding:.8rem}}
+  </style>
 </head>
 <body>
+  <header>
     <h1>Resep Masakan Aceh</h1>
+    <div class="meta">Mie Aceh — Resep sederhana, pribadi &amp; mudah diikuti</div>
+  </header>
+
+  <main>
     <h2>Mie Aceh</h2>
 
-    <h3>Bahan-bahan:</h3>
-    <ul>
+    <section aria-labelledby="bahan">
+      <h3 id="bahan">Bahan-bahan</h3>
+      <ul>
         <li>500 gr mie kuning</li>
         <li>150 gr udang</li>
         <li>100 gr daging sapi, potong kotak-kotak kecil</li>
@@ -24,10 +46,12 @@
         <li>Garam secukupnya</li>
         <li>Kaldu jamur secukupnya</li>
         <li>2 sdm minyak untuk menumis</li>
-    </ul>
+      </ul>
+    </section>
 
-    <h3>Bumbu Halus:</h3>
-    <ul>
+    <section aria-labelledby="bumbu">
+      <h3 id="bumbu">Bumbu Halus</h3>
+      <ul>
         <li>1 sdt garam</li>
         <li>1/2 sdt merica</li>
         <li>1/4 sdt adas manis</li>
@@ -40,19 +64,33 @@
         <a href="kurang-garam.html">tips masak</a>
     </ul>
 
-    <h3>Bahan Topping:</h3>
-    <ul>
+    <section aria-labelledby="topping">
+      <h3 id="topping">Bahan Topping</h3>
+      <ul>
         <li>Emping secukupnya</li>
         <li>Telur ceplok/dadar</li>
-    </ul>
+      </ul>
+    </section>
 
-    <h3>Cara Membuat:</h3>
-    <ol>
+    <section aria-labelledby="cara">
+      <h3 id="cara">Cara Membuat</h3>
+      <ol>
         <li>Haluskan semua bumbu lalu tambahkan sedikit minyak. Sisihkan.</li>
         <li>Tumis bawang merah dan bawang putih, masukkan udang dan daging. Aduk hingga berubah warna.</li>
         <li>Masukkan bumbu halus dan mie kuning, aduk rata.</li>
         <li>Tambahkan tauge, kecap manis, garam dan kaldu jamur. Koreksi rasa. Angkat.</li>
         <li>Sajikan dengan topping di atasnya.</li>
-    </ol>
+      </ol>
+    </section>
+
+    <p>
+      <a class="cta" href="kurang_garam.html" title="Instruksi Kurangi Garam">Lihat Perintah Kurangi Garam</a>
+    </p>
+
+  </main>
+
+  <footer>
+    <small>Resep dibuat oleh tim — disesuaikan untuk praktikum. &middot; Simpan &amp; commit pada branch fitur Anda.</small>
+  </footer>
 </body>
 </html>
