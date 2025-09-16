@@ -1,128 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resep Ayam Tangkap (Sederhana)</title>
-  <style>
-    :root{
-      --bg:#fbfbfc; --card:#fff; --accent:#d97706; --muted:#6b7280;
-      --radius:12px; font-family: Inter, system-ui, Arial, sans-serif;
-    }
-    body{
-      margin:0; padding:28px; background:linear-gradient(#fff,#fbfbfb);
-      color:#111; -webkit-font-smoothing:antialiased;
-    }
-    .wrap{ max-width:900px; margin:0 auto; }
-    .card{ background:var(--card); border-radius:var(--radius);
-           box-shadow:0 8px 28px rgba(17,24,39,0.06); padding:22px; margin-bottom:18px; }
-    header h1{ margin:0 0 6px 0; font-size:clamp(20px,4vw,30px); }
-    header p{ margin:0; color:var(--muted); }
-    .meta{ display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
-    .badge{ background:rgba(217,119,6,0.12); color:var(--accent); padding:6px 10px; border-radius:999px; font-weight:600; font-size:13px; }
-    .grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:16px; }
-    @media (max-width:760px){ .grid{ grid-template-columns:1fr; } }
-    h2{ margin:0 0 10px 0; color:#0f172a; }
-    ul, ol{ margin:0; padding-left:1.1rem; }
-    li{ margin:8px 0; }
-    .actions{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; }
-    .btn{ background:var(--accent); color:white; border:0; padding:9px 12px; border-radius:10px; cursor:pointer; font-weight:600; }
-    .btn.alt{ background:#eef2ff; color:#1e293b; }
-    .image{ height:160px; border-radius:10px; background:linear-gradient(90deg,#fff7ed,#fffdfa); display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:700; }
-    footer{text-align:center;color:var(--muted);font-size:13px;margin-top:10px;}
-    .note{ color:var(--muted); font-size:14px; margin-top:10px; }
-  </style>
+  <meta charset="UTF-8">
+  <title>Resep Ayam Tangkap Sederhana</title>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card" role="article">
-      <header>
-        <h1>Ayam Tangkap (Sederhana)</h1>
-        <p>Resep tradisional Aceh yang gurih dan renyah — versi mudah untuk dimasak di rumah.</p>
-        <div class="meta">
-          <span class="badge">Waktu: ~45 menit</span>
-          <span class="badge" style="background:rgba(99,102,241,0.08); color:#6366f1;">Porsi: 3-4</span>
-        </div>
-      </header>
+  <h1>Resep Ayam Tangkap (Sederhana)</h1>
 
-      <div class="grid">
-        <!-- Bahan -->
-        <div>
-          <h2>Bahan-bahan</h2>
-          <h3 style="font-size:14px; color:var(--muted); margin:6px 0;">Untuk ayam</h3>
-          <ul>
-            <li>1 ekor ayam, potong menjadi 8 bagian</li>
-            <li>2 sdm air jeruk nipis</li>
-            <li>1 sdt garam</li>
-            <li>Minyak goreng secukupnya (untuk menggoreng)</li>
-          </ul>
+  <h2>Bahan-bahan:</h2>
+  <ul>
+    <li>1 ekor ayam, potong-potong</li>
+    <li>2 sdm air jeruk nipis</li>
+    <li>1 sdt garam</li>
+    <li>Minyak goreng secukupnya</li>
+    <li>6 siung bawang merah</li>
+    <li>4 siung bawang putih</li>
+    <li>3 butir kemiri</li>
+    <li>1 ruas jahe</li>
+    <li>1 ruas lengkuas</li>
+    <li>2 lembar daun jeruk</li>
+    <li>3 lembar daun pandan (opsional)</li>
+    <li>Garam dan lada secukupnya</li>
+    <a href="kurang-garam.html">Tips memasak</a>
+  </ul>
 
-          <h3 style="font-size:14px; color:var(--muted); margin:10px 0 6px 0;">Bumbu (halus atau dicincang)</h3>
-          <ul>
-            <li>6 siung bawang merah</li>
-            <li>4 siung bawang putih</li>
-            <li>3 butir kemiri, sangrai</li>
-            <li>1 ruas jahe kecil</li>
-            <li>1 ruas lengkuas (memarkan)</li>
-            <li>2 lembar daun jeruk</li>
-            <li>3 lembar daun pandan (opsional)</li>
-            <li>Garam dan lada secukupnya</li>
-            <a href="kurang-garam.html">tips memasak</a>
-          </ul>
-
-          <div class="actions">
-            <button class="btn" onclick="window.print()">Cetak Resep</button>
-            <button class="btn alt" onclick="toggleTips()">Tampilkan Tips</button>
-          </div>
-
-          <p id="tips" class="note" style="display:none;">
-            Tips: Untuk hasil renyah, goreng ayam dua tahap: goreng dulu sampai matang, angkat; goreng lagi sebentar sampai kecokelatan saat akan disajikan.
-          </p>
-        </div>
-
-        <!-- Langkah -->
-        <div>
-          <h2>Langkah-langkah</h2>
-          <ol>
-            <li><strong>Marinasi ayam:</strong> Cuci ayam, lumuri dengan air jeruk nipis dan garam. Diamkan 10 menit, bilas, tiriskan.</li>
-            <li><strong>Tumis bumbu:</strong> Haluskan bawang merah, bawang putih, kemiri, dan jahe. Tumis bersama lengkuas dan daun jeruk sampai harum.</li>
-            <li>Masukkan tumisan bumbu ke ayam, aduk rata. Tambahkan sedikit air (100–150 ml) dan masak dengan api kecil hingga bumbu meresap dan ayam empuk (±15–20 menit).</li>
-            <li>Angkat ayam dari bumbu. Panaskan minyak banyak untuk menggoreng.</li>
-            <li>Goreng ayam sampai berwarna kecokelatan dan renyah. Tiriskan pada rak atau tisu kertas.</li>
-            <li>Sajikan hangat dengan sambal dan nasi putih.</li>
-          </ol>
-
-          <div style="margin-top:12px;">
-            <strong>Variasi & catatan:</strong>
-            <ul>
-              <li>Tambahkan daun pandan saat menumis untuk aroma khas.</li>
-              <li>Bumbu bisa disesuaikan (lebih pedas/tidak) sesuai selera.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
-        <div style="flex:1;min-width:220px;">
-          <div class="image">Gambar Ayam Tangkap (opsional)</div>
-        </div>
-        <div style="flex:2;min-width:240px;">
-          <h3>Catatan penyajian</h3>
-          <p class="note">Ayam Tangkap paling enak disajikan hangat. Bila ingin lebih renyah, goreng sebentar kembali sebelum disajikan.</p>
-        </div>
-      </div>
-    </div>
-
-    <footer class="note">Dibuat dengan ♥ — Selamat memasak!</footer>
-  </div>
-
-  <script>
-    function toggleTips(){
-      const el = document.getElementById('tips');
-      el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
-    }
-  </script>
+  <h2>Cara Memasak:</h2>
+  <ol>
+    <li>Cuci ayam, lumuri dengan jeruk nipis dan garam, diamkan 10 menit lalu bilas.</li>
+    <li>Haluskan bawang merah, bawang putih, kemiri, dan jahe. Tumis bersama lengkuas dan daun jeruk sampai harum.</li>
+    <li>Masukkan ayam, aduk rata dengan bumbu. Tambahkan sedikit air dan masak hingga ayam empuk.</li>
+    <li>Panaskan minyak, goreng ayam hingga kecokelatan dan renyah.</li>
+    <li>Sajikan dengan nasi putih dan sambal.</li>
+  </ol>
 </body>
 </html>
