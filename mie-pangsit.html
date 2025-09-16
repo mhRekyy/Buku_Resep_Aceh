@@ -158,6 +158,229 @@
           <li>1/2 sdt garam</li>
           <li>1 sdm minyak goreng</li>
           <li>Lembar pangsit siap pakai (multipack)</li>
+          <a href="Kurang-garam.html">Lihat Perintah</a>
+        </ul>
+
+        <div class="actions">
+          <button class="btn" onclick="window.print()">Cetak Resep</button>
+          <button class="btn secondary" onclick="toggleTips()">Tunjukkan Tips</button>
+        </div>
+
+        <p class="note" id="tips" style="display:none;">
+          Tips: Untuk pangsit yang lebih renyah, goreng pangsit yang sudah diisi sebentar sampai berwarna keemasan.
+          Untuk versi sehat, rebus pangsit di air mendidih sampai matang.
+        </p>
+      </div>feat
+
+      <!-- Langkah -->
+      <div class="card" aria-labelledby="langkah-title">
+        <h2 id="langkah-title">Langkah-langkah Membuat</h2>
+        <ol class="steps">
+          <li><strong>Siapkan isi pangsit:</strong> Tumis bawang putih dengan 1 sdm minyak sampai harum. Masukkan daging ayam cincang, masak sampai berubah warna.</li>
+          <li>Tambahkan kecap manis, kecap asin, lada, dan garam. Aduk rata. Cicipi, angkat dan dinginkan sebentar.</li>
+          <li><strong>Isi pangsit:</strong> Ambil selembar kulit pangsit, beri 1 sdt isi di tengah. Basahi pinggir kulit dengan air, lipat segitiga atau bentuk sesuai selera, rapatkan.</li>
+          <li>Panggang atau rebus pangsit: Untuk direbus → masukkan pangsit ke air mendidih, masak 3–5 menit sampai matang dan mengapung. Untuk digoreng → goreng dalam minyak panas hingga kecokelatan.</li>
+          <li><strong>Siapkan kuah & mie:</strong> Didihkan 1,2 liter air, tumis sedikit bawang putih (opsional) lalu tuang ke panci. Tambahkan garam/kaldu secukupnya, kecap asin sedikit, dan minyak wijen.</li>
+          <li>Rebus mie sesuai petunjuk kemasan. Tiriskan dan bagi ke mangkuk. Letakkan pangsit di atas mie lalu tuangkan kuah panas.</li>
+          <li>Taburi irisan daun bawang, bawang goreng, sambal, atau kecap sesuai selera. Sajikan hangat.</li>
+        </ol>
+
+        <div style="margin-top:10px;">
+          <strong>Variasi:</strong>
+          <ul>
+            <li>Tambahkan sayuran seperti sawi atau baby bok choy ke dalam kuah.</li>
+            <li>Buat pangsit goreng isi udang untuk rasa yang lebih gurih.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gambar / placeholder -->
+    <div class="card">
+      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
+        <div style="flex:1;min-width:220px;">
+          <div class="image-placeholder">Gambar Mie Pangsit (opsional)</div>
+        </div>
+        <div style="flex:2;min-width:240px;">
+          <h3>Catatan Penyajian</h3>
+          <p class="note">Sajikan mie pangsit selagi panas agar kuah dan tekstur pangsit terasa terbaik. Bila ingin disimpan, simpan pangsit terpisah dari mie lalu panaskan kembali sebelum disajikan.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Dibuat dengan ♥ — Selamat memasak!
+    </footer>
+  </div>
+
+  <script>
+    function toggleTips(){
+      const el = document.getElementById('tips');
+      el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resep Mie Pangsit</title>
+  <style>
+    /* Gaya sederhana dan responsif */
+    :root{
+      --bg:#f7f7f9;
+      --card:#ffffff;
+      --accent:#e76f51;
+      --muted:#6b6b6b;
+      --radius:12px;
+      font-family: Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      margin:0;
+      padding:24px;
+      background:linear-gradient(180deg,var(--bg),#fff);
+      color:#222;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(15,15,15,0.06);
+      padding:22px;
+      margin-bottom:18px;
+    }
+    header h1{
+      margin:0 0 6px 0;
+      font-size: clamp(20px, 3.6vw, 30px);
+      letter-spacing: -0.02em;
+    }
+    header p{
+      margin:0;
+      color:var(--muted);
+    }
+    .meta{
+      display:flex;
+      gap:12px;
+      margin-top:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .badge{
+      background:rgba(231,111,81,0.12);
+      color:var(--accent);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+    }
+    @media (max-width:720px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    h2{
+      margin-top:0;
+      color:#1f2937;
+    }
+    ul.ingredients{
+      padding-left:1.1rem;
+      margin:0;
+    }
+    ol.steps{
+      padding-left:1.1rem;
+      margin:0;
+    }
+    li{ margin:8px 0; }
+    .note{
+      font-size:14px;
+      color:var(--muted);
+      margin-top:10px;
+    }
+    .actions{
+      display:flex;
+      gap:10px;
+      margin-top:16px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      border:0;
+      padding:10px 14px;
+      border-radius:10px;
+      cursor:pointer;
+      background:var(--accent);
+      color:white;
+      font-weight:600;
+    }
+    .btn.secondary{
+      background:#edf2f7;
+      color:#111;
+      font-weight:600;
+    }
+    .image-placeholder{
+      height:180px;
+      border-radius:10px;
+      background:linear-gradient(90deg,#ffe8d6,#fff7f0);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--muted);
+      font-weight:700;
+    }
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="article">
+      <header>
+        <h1>Resep Mie Pangsit</h1>
+        <p>Mie pangsit hangat dengan pangsit isi daging ayam — mudah dibuat di rumah.</p>
+        <div class="meta">
+          <span class="badge">Waktu: 45 menit</span>
+          <span class="badge" style="background:rgba(99,102,241,0.12); color:#6366f1;">Porsi: 4</span>
+        </div>
+      </header>
+    </div>
+
+    <div class="grid">
+      <!-- Bahan -->
+      <div class="card" aria-labelledby="bahan-title">
+        <h2 id="bahan-title">Bahan-bahan</h2>
+        <h3 style="font-size:15px; margin:6px 0 10px 0; color:var(--muted)">Untuk mie & kuah</h3>
+        <ul class="ingredients">
+          <li>250 gr mie telur (atau mie kering)</li>
+          <li>1,2 liter air untuk kuah</li>
+          <li>2 siung bawang putih, cincang</li>
+          <li>1 batang daun bawang, iris halus</li>
+          <li>1 sdm kecap asin atau garam secukupnya</li>
+          <li>1 sdm minyak wijen (opsional)</li>
+          <li>Kaldu ayam bubuk atau penyedap secukupnya</li>
+        </ul>
+
+        <h3 style="font-size:15px; margin:14px 0 10px 0; color:var(--muted)">Untuk pangsit (isi)</h3>
+        <ul class="ingredients">
+          <li>200 gr daging ayam cincang (bisa ganti udang atau campur)</li>
+          <li>1 sdm kecap manis</li>
+          <li>1 sdm kecap asin</li>
+          <li>1/2 sdt lada bubuk</li>
+          <li>1/2 sdt garam</li>
+          <li>1 sdm minyak goreng</li>
+          <li>Lembar pangsit siap pakai (multipack)</li>
         </ul>
 
         <div class="actions">
